@@ -37,11 +37,15 @@ export default {
   }
 
   .playerScore {
-    color: white;
+    color: orange;
+    /* -webkit-box-shadow: 0px 0px 15px #f5af1a; */
+       /* -moz-box-shadow: 0px 0px 15px #f5af1a;
+            box-shadow: 0px 0px 15px #f5af1a; */
     font-size: 5em;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
+    font-family: 'impact';
   }
 
   #playerOneScore {

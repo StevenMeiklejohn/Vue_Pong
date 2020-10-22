@@ -22,7 +22,7 @@ export default {
   },
   mounted () {
     this.yPos = this.$parent.$refs.game.clientHeight / 2 - 50
-    this.xPos = this.isLeftPaddle ? 15 : this.$parent.$refs.game.clientWidth - 35
+    this.xPos = 30
     eventBus.$emit('PaddleLeftPosition', {xPos: this.xPos, ypos: this.yPos})
   },
   created: function () {
@@ -50,9 +50,27 @@ export default {
 
 <style scoped>
     #paddle {
-        width: 20px;
+      width: 20px;
+      height: 100px;
+      border: 1px solid orange; /* some kind of blue border */
+      /* other CSS styles */
+
+      /* round the corners */
+    /* -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+            border-radius: 100%; */
+
+    /* make it glow! */
+    -webkit-box-shadow: 0px 0px 15px #f5af1a;
+       -moz-box-shadow: 0px 0px 15px #f5af1a;
+            box-shadow: 0px 0px 15px #f5af1a; /* some variation of blue for the shadow */
+    background:orange;
+
+
+
+        /* width: 20px;
         height: 100px;
-        background-color: white;
+        background-color: white; */
         position: absolute;
         left: 10px;
         top: 500px;

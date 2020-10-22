@@ -77,10 +77,10 @@ export default {
       }
     },
     checkPaddleHit () {
-      if ((this.xPos < this.leftPaddlePosition.xPos + 10) && (this.yPos < this.leftPaddlePosition.yPos + 100) && (this.yPos > this.leftPaddlePosition.yPos - 100)) {
+      if ((this.xPos < this.leftPaddlePosition.xPos + 20) && (this.yPos < this.leftPaddlePosition.yPos + 100) && (this.yPos > this.leftPaddlePosition.yPos - 100)) {
         this.xDir = 'leftToRight'
       }
-      if ((this.xPos > this.rightPaddlePosition.xPos - 10) && (this.yPos < this.rightPaddlePosition.yPos + 100) && (this.yPos > this.rightPaddlePosition.yPos - 100)) {
+      if ((this.xPos > this.rightPaddlePosition.xPos - 20) && (this.yPos < this.rightPaddlePosition.yPos + 100) && (this.yPos > this.rightPaddlePosition.yPos - 100)) {
         console.log('redirect');
         this.xDir = 'rightToLeft'
       }
@@ -118,9 +118,23 @@ export default {
 
 <style scoped>
   #ball {
-    background: white;
+    border: 1px solid orange; /* some kind of blue border */
+    /* other CSS styles */
+
+    /* round the corners */
+    -webkit-border-radius: 100%;
+       -moz-border-radius: 100%;
+            border-radius: 100%;
+
+    /* make it glow! */
+    -webkit-box-shadow: 0px 0px 15px #f5af1a;
+       -moz-box-shadow: 0px 0px 15px #f5af1a;
+            box-shadow: 0px 0px 15px #f5af1a; /* some variation of blue for the shadow */
+    background:orange;
+
+    /* background: white; */
     position: absolute;
-    border-radius: 100%;
+    /* border-radius: 100%; */
     /* transition: all linear; */
   }
 </style>
